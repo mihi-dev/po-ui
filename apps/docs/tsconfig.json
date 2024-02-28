@@ -8,7 +8,11 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@styled-system/*": ["./styled-system/*"],
+      "@/*": ["./src/*"],
+    }
   },
   "include": ["src", "next-env.d.ts", ".next/types/**/*.ts"]
 }
