@@ -34,7 +34,7 @@ export default function RootLayout({
           <header
             className={css({
               py: 4,
-              px: 8,
+              px: 6,
               display: "flex",
               alignItems: "center",
               gap: 8,

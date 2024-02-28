@@ -1,13 +1,26 @@
 "use client";
 import { css } from "@styled-system/css";
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useTheme } from "next-themes";
 
 const Logo = () => {
   const { theme } = useTheme();
-  
+
+  const imageProps: ImageProps = {
+    src: '',
+    alt: "Logo",
+    sizes: "100vw",
+    height: 0,
+    width: 0,
+    style: {
+      width: "auto",
+      height: 48,
+    },
+    priority: true,
+  };
+
   return (
     <Link
       href="/"
@@ -18,31 +31,9 @@ const Logo = () => {
       })}
     >
       {theme === "light" ? (
-        <Image
-          src="/light-logo.svg"
-          alt="Logo"
-          sizes="100vw"
-          height={0}
-          width={0}
-          style={{
-            width: "auto",
-            height: 64,
-          }}
-          priority
-        />
+        <Image {...imageProps} src="/light-logo.svg" />
       ) : (
-        <Image
-          src="/dark-logo.svg"
-          alt="Logo"
-          sizes="100vw"
-          height={0}
-          width={0}
-          style={{
-            width: "auto",
-            height: 64,
-          }}
-          priority
-        />
+        <Image {...imageProps} src="/dark-logo.svg" />
       )}
     </Link>
   );
