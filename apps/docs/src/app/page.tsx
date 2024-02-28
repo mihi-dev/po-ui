@@ -10,7 +10,7 @@ export default function Page() {
           fontWeight: "bold",
         })}
       >
-        "Kungfu secret" for your component library
+        "Kungfu secret" for Web developers
       </h1>
       <p
         className={css({
@@ -18,9 +18,8 @@ export default function Page() {
           textAlign: "center",
         })}
       >
-        A collection of components built with <b>PandaCSS</b> and{" "}
-        <b>React Aria</b> hooks that lets you turn designs into applications
-        with the <b>"copy & paste" ultimate</b>.
+        A collection of components styled with <b>PandaCSS</b> that lets you
+        turn designs into applications with just <b>"copy & paste"</b>.
       </p>
     </div>
   );
