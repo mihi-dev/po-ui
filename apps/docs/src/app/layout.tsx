@@ -8,6 +8,8 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Github } from "lucide-react";
 
+const pkg = require("../../package.json");
+
 export const metadata: Metadata = {
   title: "PoUI",
 };
@@ -22,6 +24,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const currentVersion = pkg.version;
   return (
     <html lang="en" className={sans.className}>
       <body
@@ -37,15 +40,37 @@ export default function RootLayout({
               px: 6,
               display: "flex",
               alignItems: "center",
-              gap: 8,
+              gap: 12,
               borderBottomColor: "stone.300",
               borderBottomWidth: 1,
             })}
           >
-            <Logo />
+            <div
+              className={css({
+                display: "flex",
+                flexShrink: 0,
+                alignItems: "center",
+                gap: 4,
+              })}
+            >
+              <Logo />
+              <span
+                className={css({
+                  fontSize: 12,
+                  color: "background",
+                  px: 2,
+                  borderRadius: 4,
+                  backgroundColor: "foreground",
+                })}
+              >
+                v{currentVersion}
+              </span>
+            </div>
             <nav
               className={css({
                 display: "flex",
+                flex: 1,
+                justifyContent: "flex-end",
                 gap: 4,
               })}
             >
@@ -54,9 +79,8 @@ export default function RootLayout({
             </nav>
             <div
               className={css({
-                flex: 1,
                 display: "flex",
-                justifyContent: "flex-end",
+                flexShrink: 0,
                 gap: 4,
               })}
             >
