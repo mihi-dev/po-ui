@@ -4,7 +4,7 @@ A collection of components styled with **PandaCSS** that lets you turn designs i
 
 # Docs
 
-Visit http://poui.mihi.dev to view the documentation.
+Visit https://poui.mihi.dev to view the documentation.
 
 ## License
 
