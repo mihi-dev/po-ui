@@ -54,17 +54,6 @@ export default function RootLayout({
               })}
             >
               <Logo />
-              <span
-                className={css({
-                  fontSize: 12,
-                  color: "background",
-                  px: 2,
-                  borderRadius: 4,
-                  backgroundColor: "foreground",
-                })}
-              >
-                v{currentVersion}
-              </span>
             </div>
             <nav
               className={css({
@@ -80,6 +69,7 @@ export default function RootLayout({
             <div
               className={css({
                 display: "flex",
+                alignItems: "center",
                 flexShrink: 0,
                 gap: 4,
               })}
@@ -88,6 +78,17 @@ export default function RootLayout({
                 <Github size={24} />
               </Link>
               <ThemeSwitcher />
+              <span
+                className={css({
+                  fontSize: 12,
+                  color: "background",
+                  px: 2,
+                  borderRadius: 4,
+                  backgroundColor: "foreground",
+                })}
+              >
+                v{currentVersion}
+              </span>
             </div>
           </header>
           <main

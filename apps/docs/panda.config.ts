@@ -23,14 +23,14 @@ export default defineConfig({
       colors: {
         foreground: {
           value: {
-            _light: '{colors.slate.900}',
+            _light: '{colors.gray.700}',
             _dark: '#fff'
           }
         },
         background: {
           value: {
             _light: '#fff',
-            _dark: '{colors.slate.900}'
+            _dark: '{colors.gray.700}'
           }
         },
       },
