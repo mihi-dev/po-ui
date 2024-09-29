@@ -1,22 +1,22 @@
-import "./globals.css";
-import Link from "next/link";
-import { css } from "@styled-system/css";
-import Logo from "../components/Logo";
-import { Metadata } from "next";
-import { Titillium_Web } from "next/font/google";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { Github } from "lucide-react";
+import './globals.css';
+import Link from 'next/link';
+import { css } from '@styled-system/css';
+import Logo from '../components/Logo';
+import { Metadata } from 'next';
+import { Titillium_Web } from 'next/font/google';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import { Github } from 'lucide-react';
 
-const pkg = require("../../package.json");
+const pkg = require('../../package.json');
 
 export const metadata: Metadata = {
-  title: "PoUI",
+  title: 'PoUI',
 };
 
 const sans = Titillium_Web({
-  subsets: ["latin"],
-  weight: ["400", "700"],
+  subsets: ['latin'],
+  weight: ['400', '700'],
 });
 
 export default function RootLayout({
@@ -26,30 +26,30 @@ export default function RootLayout({
 }) {
   const currentVersion = pkg.version;
   return (
-    <html lang="en" className={sans.className}>
+    <html lang='en' className={sans.className}>
       <body
         className={css({
-          backgroundColor: "background",
-          color: "foreground",
+          backgroundColor: 'background',
+          color: 'foreground',
         })}
       >
-        <ThemeProvider defaultTheme="system" enableSystem>
+        <ThemeProvider defaultTheme='system' enableSystem>
           <header
             className={css({
               py: 4,
               px: 6,
-              display: "flex",
-              alignItems: "center",
+              display: 'flex',
+              alignItems: 'center',
               gap: 12,
-              borderBottomColor: "stone.300",
+              borderBottomColor: 'stone.300',
               borderBottomWidth: 1,
             })}
           >
             <div
               className={css({
-                display: "flex",
+                display: 'flex',
                 flexShrink: 0,
-                alignItems: "center",
+                alignItems: 'center',
                 gap: 4,
               })}
             >
@@ -57,34 +57,34 @@ export default function RootLayout({
             </div>
             <nav
               className={css({
-                display: "flex",
+                display: 'flex',
                 flex: 1,
-                justifyContent: "flex-end",
+                justifyContent: 'flex-end',
                 gap: 4,
               })}
             >
-              <Link href="/docs">Docs</Link>
-              <Link href="/about">About</Link>
+              <Link href='/docs'>Docs</Link>
+              <Link href='/about'>About</Link>
             </nav>
             <div
               className={css({
-                display: "flex",
-                alignItems: "center",
+                display: 'flex',
+                alignItems: 'center',
                 flexShrink: 0,
                 gap: 4,
               })}
             >
-              <Link href="https://github.com/mihi-dev/po-ui" target="_blank">
+              <Link href='https://github.com/mihi-dev/po-ui' target='_blank'>
                 <Github size={24} />
               </Link>
               <ThemeSwitcher />
               <span
                 className={css({
                   fontSize: 12,
-                  color: "background",
+                  color: 'background',
                   px: 2,
                   borderRadius: 4,
-                  backgroundColor: "foreground",
+                  backgroundColor: 'foreground',
                 })}
               >
                 v{currentVersion}

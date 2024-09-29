@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Page() {
   return (
@@ -6,5 +6,5 @@ export default function Page() {
       <h1>About us</h1>
       <p>Coming soon...</p>
     </div>
-  )
+  );
 }
