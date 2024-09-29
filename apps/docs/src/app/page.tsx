@@ -1,13 +1,13 @@
-import { css } from "@styled-system/css";
+import { css } from '@styled-system/css';
 
 export default function Page() {
   return (
     <div className={css({ paddingTop: 8 })}>
       <h1
         className={css({
-          textAlign: "center",
+          textAlign: 'center',
           fontSize: 48,
-          fontWeight: "bold",
+          fontWeight: 'bold',
         })}
       >
         "Kungfu secret" for Web developers
@@ -15,7 +15,7 @@ export default function Page() {
       <p
         className={css({
           fontSize: 18,
-          textAlign: "center",
+          textAlign: 'center',
         })}
       >
         A collection of components styled with <b>PandaCSS</b> that lets you

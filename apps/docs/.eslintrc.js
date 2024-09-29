@@ -10,9 +10,10 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "prettier",
+    "plugin:prettier/recommended",
     require.resolve("@vercel/style-guide/eslint/next"),
   ],
+  plugins: ["only-warn"],
   globals: {
     React: true,
     JSX: true,

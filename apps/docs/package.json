@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start ",
     "dev": "next dev -p 3002",
-    "lint": "next lint",
+    "lint": "next lint --max-warnings=0",
+    "lint:fix": "next lint --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
@@ -27,6 +28,8 @@
     "@typescript-eslint/parser": "^6.17.0",
     "@vercel/style-guide": "^5.1.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-only-warn": "1.1.0",
+    "eslint-plugin-prettier": "5.2.1",
     "typescript": "^5.3.3"
   }
 }
